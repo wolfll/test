@@ -1,0 +1,42 @@
+
+安装jdk
+  sudo apt-get install python-software-properties     
+  sudo add-apt-repository ppa:webupd8team/java     
+  sudo apt-get update                               
+  sudo apt-get install oracle-java8-installer  
+  或者直接
+  apt-get install openjdk-8*
+  
+  安装mysql
+  sudo apt-get install mysql-server
+  apt-get isntall mysql-client
+  sudo apt-get install libmysqlclient-dev
+  
+  卸载mysql并删除数据
+  sudo apt-get autoremove --purge mysql-server-x.X     （x.x为数据库版本,通过mysql -version 查看）
+  sudo apt-get remove mysql-server
+  /var/lib/mysql  
+  /var/lib/mysql/mysql  
+  /var/log/mysql  
+  /usr/bin/mysql  
+  /usr/lib/mysql  
+  /usr/share/mysql  
+  /etc/mysql  
+  /etc/init.d/mysql
+  
+  sudo rm -rf /etc/init.d/mysql
+  
+  
+  
+  获取root用户
+  sudo passwd root
+键盘无法连续键入
+  echo "blacklist peaq_wmi" >> /etc/modprobe.d/50-blacklist.conf
+安装实时网速
+  sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+  sudo apt-get update
+  sudo apt-get install indicator-sysmonitor
+安装git
+  sudo apt-get install git git-core git-gui git-doc git-svn git-cvs gitweb gitk git-email git-el git-arch
+火狐中文
+  http://ftp.mozilla.org/pub/firefox/releases/版本号/linux-x86_64/xpi/
