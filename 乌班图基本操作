@@ -6,6 +6,23 @@
   sudo apt-get install oracle-java8-installer  
   或者直接
   apt-get install openjdk-8*
+ idea 桌面添加快捷方式
+   sudo vim /home/hcb/桌面/idea.desktop
+   进入编辑：
+   [Desktop Entry]
+Name=IntelliJ IDEA
+Comment=IntelliJ IDEA
+Exec=/opt/idea/idea-IU-182.3684.101/bin/idea.sh  //你安装的文件地址下的idea.sh
+Icon=/opt/idea/idea-IU-182.3684.101/bin/idea.png //你安装的文件地址下的idea.png
+Terminal=false
+Type=Application
+Categories=Developer;
+按esc  在输入：wq 退出
+在编辑：
+sudo chmod +x /home/hcb/桌面/intellij-idea.desktop
+
+完成
+  
   
   安装mysql
   sudo apt-get install mysql-server
