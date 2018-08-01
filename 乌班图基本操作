@@ -40,3 +40,28 @@
   sudo apt-get install git git-core git-gui git-doc git-svn git-cvs gitweb gitk git-email git-el git-arch
 火狐中文
   http://ftp.mozilla.org/pub/firefox/releases/版本号/linux-x86_64/xpi/
+  
+  
+  
+  卸载程序(包括配置文件)、卸载依赖、删除/var/cache/apt/archives下所有安装包
+  apt-get remove packagename --purge && apt-get autoremove --purge && apt-get clean
+  
+  最佳升级软件命令
+   apt-get update && apt-get upgrade
+  
+  apt常用命令
+
+    apt-cache show packagename 获取包的相关信息，如说明、大小、版本等
+    apt-cache depends packagename 了解使用依赖
+    apt-cache rdepends packagename 是查看该包被哪些包依赖
+    apt-get install packagename 安装包
+    apt-get install package=version 指定安装版本
+    apt-get install packagename --reinstall 重新安装包
+    apt-get remove packagename --purge 卸载程序，包括删除配置文件等
+    apt-get update 更新源,更新 /etc/apt/sources.list里的链接地址
+    apt-get upgrade -u 升级程序(不包括依赖关系改变的) -u 完整显示列表
+    apt-get dist-upgrade 升级程序(包括依赖关系改变的并且重新组织依赖关系)
+    apt-get clean 删除安装包(节约硬盘空间,下次安装需要重新下载包，软件包位置：/var/cache/apt/archives/)
+    apt-get autoclean 删除已卸载的安装包(Ubuntu14.04测试发现没起作用)
+    apt-get autoremove 卸载依赖的程序
+
