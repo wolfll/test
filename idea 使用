@@ -1,0 +1,32 @@
+破解：
+下載JetbrainsCrack-2.10-release-enc.jar包（网址：http://idea.lanyus.com/ 下载激活的包)
+将下载的包放在idea的bin 目录下
+在bin目录下的两个 .vmoptions文件最后一行分别添加：-javaagent:/home/hcb/src/idea/bin/JetbrainsCrack-2.10-release-enc.jar（用文本打开，添加的是jar包的绝对路径）
+最后重启idea,在Activition Code 中复制：
+
+ThisCrackLicenseId-{
+"licenseId":"ThisCrackLicenseId",
+"licenseeName":"idea",
+"assigneeName":"",
+"assigneeEmail":"idea@163.com",
+"licenseRestriction":"For This Crack, Only Test! Please support genuine!!!",
+"checkConcurrentUse":false,
+"products":[
+{"code":"II","paidUpTo":"2099-12-31"},
+{"code":"DM","paidUpTo":"2099-12-31"},
+{"code":"AC","paidUpTo":"2099-12-31"},
+{"code":"RS0","paidUpTo":"2099-12-31"},
+{"code":"WS","paidUpTo":"2099-12-31"},
+{"code":"DPN","paidUpTo":"2099-12-31"},
+{"code":"RC","paidUpTo":"2099-12-31"},
+{"code":"PS","paidUpTo":"2099-12-31"},
+{"code":"DC","paidUpTo":"2099-12-31"},
+{"code":"RM","paidUpTo":"2099-12-31"},
+{"code":"CL","paidUpTo":"2099-12-31"},
+{"code":"PC","paidUpTo":"2099-12-31"}
+],
+"hash":"2911276/0",
+"gracePeriodDays":7,
+
+"autoProlongated":false}
+ 到此结束
