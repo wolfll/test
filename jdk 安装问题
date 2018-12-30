@@ -1,0 +1,16 @@
+官网下载安装包
+
+安装路径：D:\JAVA\JDK   D:\JAVA\JRE
+将jdk 安装在JDK中，jre安装在JRE中
+
+环境变量配置：
+JAVA_HOME : D:\JAVA\JDK
+JRE_HOME:   D:\JAVA\JRE
+
+CLASSPATH:  .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar //注意是开头 .; 点加分号
+
+path ： %JAVA_HOME%\bin  %JAVA_HOME%\jre\bin  //添加这两行分号可以不要，不影响
+
+jdk 和jre 安装不能在同一个文件下，不然安装jre 时会把jdk 内的jre 覆盖掉。
+jdk9 以后没有bin 目录下tools.jar 
+
