@@ -1,0 +1,57 @@
+1  官网下载压缩包(例：mysql-8.0.13-winx64.zip)
+2  将其解压在 D:\mysql
+3  打开 D:\mysql\mysql8(文件mysql-8.0.13-winx64改名为mysql8)
+4  在里边添加my.ini 文件
+内容：
+[mysqld]
+#端口
+port = 3306
+#mysql安装目录
+basedir =D:/mysql/mysql8
+#mysql数据存放目录
+datadir =D:/mysql/mysql8/data
+#允许最大连接数
+max_connections = 1024
+#服务端默认使用字符集
+character-set-server = utf8mb4
+#默认存储引擎
+default-storage-engine = INNODB
+#服务唯一标识
+server_id = 1
+#是否启用慢查询
+slow_query_log = 1
+#指定慢查询日志文件的路径和名字
+slow_query_log_file = slow.log
+#SQL语句运行时间超过该值才会被记录
+long_query_time = 10
+#开启binlog日志
+log-bin = mysql-bin
+#sql模式
+sql_mode = NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+ 
+#注意这里，mysql8默认密码验证插件改为了caching_sha2_password
+#为了与之前的兼容，这里改回mysql_native_password
+default_authentication_plugin = mysql_native_password
+ 
+[mysql]
+default-character-set = utf8mb4
+ 
+[client]
+port = 3306
+default-character-set = utf8mb4
+
+5  保存文件，删除同文件夹下的data文件
+6  以管理员身份运行dos,输入d: 进入D盘，输入 cd \mysql\mysql8\bin ,进入bin 
+7  输入 mysqld --initialize --console  记住初始密码
+8  输入 mysqld --install  mysql8 (数据库名)
+9  启动 net start mysql8
+10 启动后 输入 MySQL-u root -p  再输入初始密码
+11 修改密码 ：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+12 输入  quit; 退出数据库
+13 退出dos
+14 为mysql 添加环境变量 我的电脑-》属性-》高级系统设置-》环境变量-》新建变量名： MySQL_HOME 值：D:\mysql\mysql8
+15 同窗口内找到 变量名：path 点击编辑-》添加 %MySQL_HOME%\bin (bin 后面可以不用分号)
+16 这样就不用还要进入D：\mysql\mysql8\bin 才能启动mysql 了，直接在dos 界面输入 mysql -u root -p 即可
+
+
+7 
