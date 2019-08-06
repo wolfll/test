@@ -1,0 +1,16 @@
+下载安装包
+
+安装成功后，修改数据库的字符集为utf8，修改navicat文件夹下的start_navicat文件的字符，修改为export LANG="zh_CN.UTF-8"即可
+
+连接数据库后的乱码解决
+首先在连接数据库时，在高级选项中，设置编码为UTF-8，连接成功后进入界面。
+
+
+
+选择工具-首选项，常规页签下，字体选择Noto Sans Mono CJK TC Regular
+
+编辑器页签下编辑器字体选择Noto Sans CJK SC Regular
+
+记录页签下网格字体选择Noto Sans Mono CJK TC Regular
+
+修改完成后，重启软件后，编码问题即可解决！
