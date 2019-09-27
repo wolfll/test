@@ -1,0 +1,18 @@
+下载wps安装包　　：http://wps-community.org/downloads
+包括　wps 包和fonts　包两个
+
+安装
+sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
+sudo dpkg -i wps-office-fonts_1.0_all.deb
+
+解决字体问题：
+下载　（链接: https://pan.baidu.com/s/1i5dzB9r 密码: pwe1）
+再执行：　　sudo unzip wps_symbol_fonts.zip -d /usr/share/fonts/wps-office
+
+注意：一定要以wps-office的文件夹进行保存，如果没有以这样命名，那么可以按照以下方法进行：
+
+#生成字体的索引信息
+sudo mkfontscale
+sudo mkfontdir
+#运行fc-cache命令更新字体缓存
+sudo fc-cache
